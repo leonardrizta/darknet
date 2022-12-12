@@ -1279,7 +1279,7 @@ float validate_detector_map(char *datacfg, char *cfgfile, char *weightfile, floa
             else pr[i][rank].recall = 0;
 
             if (rank == (detections_count - 1) && detection_per_class_count[i] != (tp + fp)) {    // check for last rank
-                    printf(" class_id: %d - detections = %d, tp+fp = %d, tp = %d, fp = %d \n", i, detection_per_class_count[i], tp+fp, tp, fp);
+                    printf(" class_id: %d - detections = %d, tp+fp = %d, tp = %d, fp = %d, precision = %d, recall = %d \n", i, detection_per_class_count[i], tp+fp, tp, fp, pr[i][rank].precision, pr[i][rank].recall);
             }
         }
     }
